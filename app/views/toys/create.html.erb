@@ -1,1 +1,10 @@
 <h1> Create Toys </h1>
+
+<%= form_tag :action => 'create' do %>
+  <p><label for = "toy_name">Toy Name</label>:
+  <%= text_field 'toys', 'name' %></p>
+
+  <p><label for = "toy_description">Description</label>:
+  <%= text_field 'toys', 'description'%></p>
+
+<% end %>

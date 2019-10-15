@@ -1,1 +1,10 @@
-<h1> Toys </h1>
+<% if @toys.blank? %>
+  <p>There are no toys in the system, add some here - </p>
+<% else %>
+  <p>These are the Toys in our system</p>
+  <%= @toys.each do |toy| %>
+    <ul>
+      <li><%= toy.description %></li>
+    </ul>
+  <% end %>
+<% end %>
