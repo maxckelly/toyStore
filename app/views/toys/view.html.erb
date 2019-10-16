@@ -1,0 +1,9 @@
+<h1>Here is your new toy!</h1>
+
+<h3><%= @new_toy.name  %></h3>
+<p><%= @new_toy.description %></p>
+<p><%= @new_toy.date%></p>
+<button><%= link_to "delete", delete_path(@new_toy), method: :delete%></button>
+<button><%= link_to "Back", root_path() %></button>
+
+

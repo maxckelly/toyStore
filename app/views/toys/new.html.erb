@@ -1,0 +1,28 @@
+<h1> Create Toys </h1>
+
+<%= form_with model: @new_toy do |form|  %>
+  <p>
+    <%= form.label :name %></p>
+    <%= form.text_field :name%>
+  </p>
+
+  <p>
+    <%= form.label :description %></p>
+    <%= form.text_field :description %>
+  </p>
+
+  <p>
+    <%= form.label :date %></p>
+    <%= form.date_field :date%>
+  </p>
+
+  <p>
+    <%= form.label :description %></p>
+    <%= form.text_field :description%>
+  </p>
+
+  <p>
+    <%= form.submit %>
+    <button><%= link_to "Cancel" , root_path()%></button>
+  </p>
+<% end %>

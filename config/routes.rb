@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get "/", to: "toys#index", as: "root"
-  get "/toy_create", to: "toys#create"
+  post "toys", to: "toys#create"
+  get "/toy/new", to: "toys#new", as: "new"
+  get "/toy/view/:id", to: "toys#view", as: "view"
+  delete 'toy/:id', to: 'toys#destroy', as: "delete"
 end
