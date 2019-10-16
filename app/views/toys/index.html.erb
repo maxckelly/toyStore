@@ -1,17 +1,17 @@
 
 <% if @toys.blank? %>
   <p>There are no toys in the system, add some here - </p>
-  <button><%= link_to "Create Toy", new_path() %></button>
+  <button><%= link_to "Create Toy", new_toy_path() %></button>
 <% else %>
   <p>These are the Toys in our system</p>
-  <button><%= link_to "Create Toy", new_path() %></button>
+  <button><%= link_to "Create Toy", new_toy_path() %></button>
   <% @toys.each do |toy| %>
     <ul>
       <li>
         Toy Name:  <%= toy.name %> <br>
         User Name: <%= toy.user %> <br>  
-        <%= link_to "view", view_path(toy)%> 
-        <button><%= link_to "delete", delete_path(toy), method: :delete %></button>
+        <%= link_to "view", toy_path(toy)%> 
+        <button><%= link_to "delete", toy_path(toy), method: :delete, data: {confirm: "Are you sure?"} %></button>
       </li>
     </ul>
   <% end %>
