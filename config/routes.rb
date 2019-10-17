@@ -6,5 +6,4 @@ Rails.application.routes.draw do
   get "/toy/view/:id", to: "toys#view", as: "view"
   delete 'toy/:id', to: 'toys#destroy', as: "delete"
 
-  resources :toy
 end
